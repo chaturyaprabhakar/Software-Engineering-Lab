@@ -1,7 +1,7 @@
 # Domain & SSL Certificate Expiry Alert System
 
 **Problem Statement #47** — Developer Tools & IT Operations
-PES1UG24CS126 · PES University, Dept. of CSE · SE Lab 1: Requirements Engineering & UML Use-Case Modelling
+PES1UG24CS126 · SE Lab 1: Requirements Engineering & UML Use-Case Modelling
 
 ## 1. Problem Context
 

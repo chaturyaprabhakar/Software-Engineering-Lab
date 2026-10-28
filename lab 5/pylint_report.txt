@@ -1,0 +1,6 @@
+************* Module billing_system
+billing_system.py:179:0: C0304: Final newline missing (missing-final-newline)
+
+-------------------------------------------------------------------
+Your code has been rated at 9.89/10 (previous run: 10.00/10, -0.11)
+

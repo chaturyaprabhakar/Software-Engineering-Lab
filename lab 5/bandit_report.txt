@@ -1,0 +1,33 @@
+Run started:2026-10-28 06:41:24.255538+00:00
+
+Test results:
+>> Issue: [B702:use_of_mako_templates] Mako templates allow HTML/JS rendering by default and are inherently open to XSS attacks. Ensure variables in all templates are properly sanitized via the 'n', 'h' or 'x' flags (depending on context). For example, to HTML escape the variable 'data' do ${ data |h }.
+   Severity: Medium   Confidence: High
+   CWE: CWE-80 (https://cwe.mitre.org/data/definitions/80.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b702_use_of_mako_templates.html
+   Location: ./billing_system.py:133:15
+132	        raise ValueError("invoice amount cannot be negative")
+133	    template = Template(
+134	        "<h1>Invoice for ${user | h}</h1><p>Total: Rs.${amount | h}</p>"
+135	    )
+136	    return template.render(user=user, amount=amount)
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 138
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 1
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 1
+Files skipped (0):
